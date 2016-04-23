@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Super-fancy and overly complicated house cost calculator</title>
+  <link rel="stylesheet" type="text/css" href="house_cost_calculator.css">
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <div class="intro">Enter some numbers, get a bunch more numbers. More details <a href="//wolfwhalewolverine.blogspot.com/2014/05/super-fancy-and-overly-complicated.html">here.</a></div>
+  <div class="parameters-form">
+    <form id="house-calc-form" class="parameters" action="javascript:calculateHousingCost();">
+      <fieldset class="house-calc left">
+        <ol class="house-calc">
+          <li class="house-calc">
+            <label for="purchasePrice">Purchase price</label>
+            <span class="dollar">
+              <input type="text" id="purchasePrice" name="purchasePrice" class="house-calc large-num" autofocus>
+            </span>
+          </li>
+          <li class="house-calc rate">
+            <label for="downPaymentPct">Down payment percentage</label>
+            <span class="percent">
+              <input type="text" id="downPaymentPct" name="downPaymentPct" class="house-calc small-num">
+            </span>
+          </li>
+          <li class="house-calc">
+            <label for="downPaymentAmt">Down payment amount</label>
+            <span class="dollar">
+              <input type="text" id="downPaymentAmt" name="downPaymentAmt" class="house-calc large-num" disabled>
+            </span>
+          </li>        
+          <li class="house-calc">
+            <label for="mortgageRate">Mortgage rate</label>
+            <span class="percent">
+              <input type="text" id="mortgageRate" name="mortgageRate" class="house-calc small-num">
+            </span>
+          </li>
+          <li class="house-calc">
+            <label for="mortgageTerm">Mortgage term</label>
+            <span class="years">
+              <input type="text" id="mortgageTerm" name="mortgageTerm" class="house-calc small-num">
+            </span>
+          </li>
+          <li class="house-calc">
+            <label for="yearsBeforeSelling">Years before selling</label>
+            <span class="years">
+              <input type="text" id="yearsBeforeSelling" name="yearsBeforeSelling" class="house-calc small-num">
+            </span>
+          </li>
+          <li class="house-calc">
+            <label for="showEvery">Show every X months</label>
+            <span class="show-every">
+              <input type="text" id="showEvery" name="showEvery" class="house-calc small-num">
+            </span>
+          </li>
+          <li class="house-calc">
+            <label for="oppCostRate">Real opportunity cost rate</label>
+            <span class="percent"><input type="text" id="oppCostRate" name="oppCostRate" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="inflationRate">Inflation rate</label>
+            <span class="percent"><input type="text" id="inflationRate" name="inflationRate" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="buyingCostPct">Buying cost (% of home value)</label>
+            <span class="percent"><input type="text" id="buyingCostPct" name="buyingCostPct" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="salesCostPct">Selling cost (% of home value)</label>
+            <span class="percent"><input type="text" id="salesCostPct" name="salesCostPct" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="realAppreciationRate">Real appreciation rate</label>
+            <span class="percent"><input type="text" id="realAppreciationRate" name="realAppreciationRate" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="propTaxRate">Property tax rate</label>
+            <span class="percent"><input type="text" id="propTaxRate" name="propTaxRate" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="propTaxExclAmt">Property tax exclusion amount</label>
+            <span class="house-calc dollar"><input type="text" id="propTaxExclAmt" name="propTaxExclAmt" class="house-calc large-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="miscExpPct">Misc expenses (% of home value)</label>
+            <span class="percent"><input type="text" id="miscExpPct" name="miscExpPct" class="house-calc small-num"></span>
+          </li>
+          <li class="house-calc">
+            <label for="miscExpAmt">Misc expenses (dollar amount)</label>
+            <span class="house-calc dollar"><input type="text" id="miscExpAmt" name="miscExpAmt" class="house-calc large-num"></span>
+          </li>
+        </ol>
+        <button>Go!</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="results">
+    <div class="results-summary"></div>
+    <div class="parameters-summary"></div>
+    <div class="column-toggles"></div>
+    <div class="results-table"></div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+  <script src="house_cost_calculator.js"></script>
+</body>
+</html>

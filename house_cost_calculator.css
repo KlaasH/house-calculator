@@ -1,0 +1,150 @@
+.intro {
+    padding: .2em;
+}
+
+/*Form styles*/
+fieldset.house-calc {
+    padding-right: 3em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+fieldset.house-calc.left {
+    width: 24em;
+    padding-buttom: 1em;
+    float: left;
+}
+
+fieldset.house-calc.right {
+    width: 20em;
+}
+
+fieldset ol.house-calc {
+    list-style: none;
+}
+
+fieldset li.house-calc {
+    padding-bottom: .5em;
+}
+
+fieldset.left ol li.house-calc>label {  
+}
+
+input.house-calc {
+    text-align: right;
+}
+
+fieldset li.house-calc>input, fieldset li.house-calc>span {
+    float: right;
+}
+
+span.percent:after {
+    content: "%";
+}
+span.dollar:before {
+    content: "$";
+}
+span.years:after {
+    content: "years";
+}
+
+input.small-num {
+    width: 3em;
+}
+
+input.large-num {
+    width: 5em;
+}
+
+input.error {
+    background-color: #FAA;
+}
+
+label.error {
+    color: red;
+}
+
+button {
+    width: 40%;
+    margin-left: 35%;
+}
+
+/*Results page and table styles*/
+body {
+    font-family: Arial,Tahoma,Helvetica,FreeSans,sans-serif;
+    color: #3A3A3A;
+}
+
+table#results-table, td.house-calc, th.house-calc { 
+    border: 1px solid #AAA; 
+    border-collapse: collapse;
+    padding: 0em .3em;
+    padding-right: .3em;
+    padding-left: .3em;
+    font-size: 90%;
+}
+
+th.house-calc {
+    background-color: #FAE8FF;    
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #FFF8F8;
+}
+
+tbody tr:hover td {
+    background-color: #FFF0F0;
+}
+
+td.house-calc {
+    text-align: right;    
+}
+
+td.house-calc.month {
+    text-align: center;
+}
+
+div.summary {
+    float: left;
+    line-height: 150%;
+}
+
+div.results-box {
+    padding: 0 2em 1em 2em;
+    margin: 0em 1em 1em 0em;
+    border: 1px solid #E4E4E4;
+    border-radius: 10px;
+    width: 20em;
+    /*background-color: #FFF8F8;*/
+}
+
+.summary span {
+    float: right;
+}
+
+a.calc-permalink {
+    text-decoration: none;
+    color: inherit;
+    font-size: smaller;
+}
+
+a.calc-permalink:hover {
+    text-decoration: underline;
+}
+
+.column-toggles {
+    float: left;
+    width: 25em;
+    display: none;
+}
+
+table#results-table {
+    clear: both;
+}
+
+.toggle {
+    padding: .2em;
+    background-color: #FAE8FF;
+    margin: .3em;
+}
+
